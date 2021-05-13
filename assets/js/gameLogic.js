@@ -1,4 +1,11 @@
-var startButton = document.getElementById("start-button")
+var startButton = document.querySelector(".start-button");
+var highScores = document.querySelector(".high-scores");
+var timeLeft = document.querySelector(".time-left");
+
+var chosenAnswer = "",
+var timer;
+var timerCount;
+var scoreCount;
 var myQuestions = [
     {
         title: "How many years can a snail sleep for?",
@@ -24,7 +31,13 @@ var myQuestions = [
         title: "An ostrich's eye is bigger than its ____",
         choices: ["Brain, Heart, Stomach, Beak"],
         answer: "Brain",
-    },
+    }
 ]
 
+var chosenAnswer = [];
+
 startButton.addEventListener("click")
+
+function startQuiz(){
+    timerCount = 60;
+}
