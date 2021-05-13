@@ -21,7 +21,7 @@ button{
     cursor:pointer;
 }
 
-.container{
+.landing-container{
     padding: 70px 0;
     border: 3px dashed skyblue;
     text-align: center;
@@ -32,3 +32,6 @@ button{
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%) }
+
+
+}
