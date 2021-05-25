@@ -14,18 +14,35 @@
     <header>
         <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand" href="high-scores">View Highscores</a>
-            <a class="timer" href="time-left">Time Left</a>
+            <div class="timer">Time Left <span id="time"></span></div>
         </nav>
     </header>
 
     <main>
-        <section>
-            <div class="landing-container">
+        
+            <div class="landing-container" id="start-screen">
                 <h1>Think you're an animal fact wiz?</h1>
                 <br>
                 <button type="button" class="start-button">Begin Quiz</button>
             </div>
-        </section>
+        
+
+        <div id="questions" class="hide">
+            <h2 id="question-text"></h2>
+            <div id="choices" class="choices"></div>
+        </div>
+
+        <div id="end" class="hide">
+            <h2>You're Done</h2>
+            <p>Your final score is <span id="score"></span></p>
+            <p>
+                Enter Initials <input type="text" id="initials" max="2">
+                <button id="submit">submit</button>
+            </p>
+        </div>
+
+        <div id ="feedback" class="feedback-hide"></div>
+
     </main>
 
 </body>
