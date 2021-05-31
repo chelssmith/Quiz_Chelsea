@@ -13,10 +13,11 @@ var submitBtn = document.getElementById("submit");
 var startBtn = document.getElementById("start-button");
 var intialEl = document.getElementById("initials");
 var feedbackEl = document.getElementById("feedback");
+var endscreenEl = document.getElementById("end-screen");
 
 
 function startQuiz() {
-// hide start screen && show questions screen
+// hide start screen when button clicked
 startscreenEl;
     if (startscreenEl.style.display === "none") {
         startscreenEl.style.display = "block";
@@ -25,4 +26,5 @@ startscreenEl;
         startscreenEl.style.display = "none";
     }
 }
-
+// hide endscreen
+endscreenEl.style.visibility ="hidden";
