@@ -14,7 +14,7 @@ body {
     text-align: center;
 }
  
-button{
+.start-button{
     font-size: 20px;
     font-weight: 600;
     padding: 15px 20px;

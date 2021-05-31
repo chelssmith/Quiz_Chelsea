@@ -9,4 +9,20 @@ var questionsEL = document.getElementById("questions");
 var questiontextEl = document.getElementById("question-text");
 var timerEL = document.getElementById("timer");
 var choicesEl = document.getElementById("choices");
-var 
+var submitBtn = document.getElementById("submit");
+var startBtn = document.getElementById("start-button");
+var intialEl = document.getElementById("initials");
+var feedbackEl = document.getElementById("feedback");
+
+
+function startQuiz() {
+// hide start screen && show questions screen
+startscreenEl;
+    if (startscreenEl.style.display === "none") {
+        startscreenEl.style.display = "block";
+    }
+    else {
+        startscreenEl.style.display = "none";
+    }
+}
+
