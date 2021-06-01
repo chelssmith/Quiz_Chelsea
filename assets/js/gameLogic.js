@@ -7,7 +7,7 @@ var timerId;
 var startscreenEl = document.getElementById("start-screen");
 var questionsEL = document.getElementById("questions");
 var questiontextEl = document.getElementById("question-text");
-var timerEL = document.getElementById("timer");
+var timerEL = document.getElementById("time");
 var choicesEl = document.getElementById("choices");
 var submitBtn = document.getElementById("submit");
 var startBtn = document.getElementById("start-button");
@@ -25,6 +25,22 @@ startscreenEl;
     else {
         startscreenEl.style.display = "none";
     }
+
+askQuestions();
 }
 // hide endscreen
 endscreenEl.style.visibility ="hidden";
+
+function askQuestions () {
+// grabbing questions from array
+  var currentQuestion = myQuestions[currentQuestionIndex];
+  
+  questiontextEl.textContent = currentQuestion.title;
+
+  choicesEl.innerHTML = "";
+
+for (var i = 0; i < currentQuestion.choices.length; i++) {
+    var choiceButton = document.createElement("button");
+    choiceButton[0].textContent = currentQuestion.choices
+}
+}
