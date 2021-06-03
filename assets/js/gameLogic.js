@@ -7,7 +7,7 @@ var timerId;
 var startscreenEl = document.getElementById("start-screen");
 var questionsEL = document.getElementById("questions");
 var questiontextEl = document.getElementById("question-text");
-var timerEL = document.getElementById("time");
+var timerEl = document.getElementById("time");
 var choicesEl = document.getElementById("choices");
 var submitBtn = document.getElementById("submit");
 var startBtn = document.getElementById("start-button");
@@ -16,9 +16,12 @@ var feedbackEl = document.getElementById("feedback");
 var endscreenEl = document.getElementById("end-screen");
 
 
+// hide endscreen
+endscreenEl.style.visibility = "hidden";
+
 function startQuiz() {
-// hide start screen when button clicked
-startscreenEl;
+    // hide start screen when button clicked
+    startscreenEl;
     if (startscreenEl.style.display === "none") {
         startscreenEl.style.display = "block";
     }
@@ -26,21 +29,41 @@ startscreenEl;
         startscreenEl.style.display = "none";
     }
 
-askQuestions();
-}
-// hide endscreen
-endscreenEl.style.visibility ="hidden";
 
-function askQuestions () {
-// grabbing questions from array
-  var currentQuestion = myQuestions[currentQuestionIndex];
-  
-  questiontextEl.textContent = currentQuestion.title;
+    //start timer 
+    // 1. call setInterval method, passing in a callback function and an interval value of 1000 as input arguments
+    // 2. store the returned id to the global variable timerId
 
-  choicesEl.innerHTML = "";
+    timerId = setInterval(clockTick, 1000)
 
-for (var i = 0; i < currentQuestion.choices.length; i++) {
-    var choiceButton = document.createElement("button");
-    choiceButton[0].textContent = currentQuestion.choices
+    // show starting time on html timer element 
+    timerEl.textContent = time;
+
+    askQuestions();
 }
+
+
+function askQuestions() {
+    // grabbing questions from array
+    var currentQuestion = myQuestions[currentQuestionIndex];
+
+    questiontextEl.textContent = currentQuestion.title;
+
+    choicesEl.innerHTML = "";
+
+    for (var i = 0; i < currentQuestion.choices.length; i++) {
+        var currentQuestionChoice = currentQuestion
+        currentQuestionChoice = document.createElement("button");
+
+        currentQuestionChoice.setAttribute("choice");
+
+        button.textContent = choices;
+
+        button.addEventListener("click" function(userChoices))
+    }
 }
+
+function userChoices () {}
+
+
+function clockTick() {}
