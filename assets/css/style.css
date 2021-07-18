@@ -40,3 +40,15 @@ body {
     right: 10px
 }
 
+.questions {
+text-align: center;
+justify-content: space-between;
+position: relative;
+top: 50%;
+left: 50%;
+transform: translate((-50%, -50%));
+}
+
+.choices {
+    justify-content: center; 
+}
